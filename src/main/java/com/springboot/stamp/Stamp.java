@@ -19,6 +19,9 @@ public class Stamp {
     @Id
     private long stampId;
     private int stampCount;
+    // r2dbc 에는 별도의 연관관계 매핑 기능을 지원하지 않음.
+    // stamp - member 1대1 관계.
+    // 외래키 역할을 하도록 추가함.
     private long memberId;
 
     @CreatedDate

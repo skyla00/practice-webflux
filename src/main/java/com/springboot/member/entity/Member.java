@@ -27,6 +27,10 @@ public class Member {
 
     private MemberStatus memberStatus = MemberStatus.MEMBER_ACTIVE;
 
+    // 데이터가 저장 또는 업데이트될 때
+    // 별도의 날짜/시간 정보를 추가하지 않아도
+    // Auditing 기능을 통해 자동으로 날짜/시간 정보가 테이블에 저장
+
     @CreatedDate
     private LocalDateTime createdAt;
 
