@@ -5,6 +5,21 @@ spring:
       data-locations: classpath*:db/h2/data.sql
 logging:
   level:
+    root: INFO
     org:
       springframework:
         r2dbc: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+#       include: prometheus << 이렇게 해도됩니다.
+  metrics:
+    tags:
+      application: backend
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true

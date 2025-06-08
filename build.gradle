@@ -22,6 +22,9 @@ dependencies {
 	testImplementation 'io.projectreactor:reactor-test'
 	implementation 'org.mapstruct:mapstruct:1.5.1.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.1.Final'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'io.micrometer:micrometer-registry-prometheus'
+	implementation 'io.opentelemetry:opentelemetry-api:1.24.0'
 	runtimeOnly 'io.r2dbc:r2dbc-h2'
 }
 
